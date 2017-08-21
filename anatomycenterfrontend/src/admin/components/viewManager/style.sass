@@ -1,0 +1,49 @@
+@import "./avatar"
+
+.container
+    position: relative
+    height: 100%
+    width: 100%
+    border: solid 1px white
+    .nav
+        position: absolute
+        left: 0
+        right: 0
+        top: 0
+        height: $nav-height
+        +avatar($nav-height)
+        +breakpoint(600px)
+            $nav-height: 75px
+            height: $nav-height
+            +avatar($nav-height)
+        display: flex
+        nav
+            flex: 10
+            li
+                list-style: none
+                font-size: 1.2rem
+                padding: 0 1rem
+                cursor: pointer
+        & > *
+            padding: 0 1rem
+            margin: 0
+            height: 100%
+            display: flex
+            justify-content: flex-start
+            align-items: center
+        & > h1, & > div
+            flex: 1
+            .user
+                display: flex
+                align-items: center
+                justify-content: center
+
+        & > div
+            justify-content: flex-end
+        box-shadow: 0 1px 2px rgba(black, 0.1)
+    .content
+        height: 100%
+        padding-top: $nav-height
+        +breakpoint(600px)
+            $nav-height: 75px
+            padding-top: $nav-height

@@ -1,0 +1,17 @@
+@import "./questions.sass"
+
+.grid
+    position: relative
+    .box
+        position: absolute
+        list-style: none
+        display: flex
+        align-items: center
+        justify-content: center
+        box-shadow: 0 0 4px rgba(white, 0.8) inset, 0 1px 2px rgba(black, 0.2)
+        transition: all 0.3s ease-in-out
+        cursor: pointer
+        &.blank
+            opacity: 0
+        &:hover
+            background-color: #ddd

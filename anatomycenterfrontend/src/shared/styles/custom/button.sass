@@ -1,0 +1,25 @@
+
+
+.accent
+    &.raised, &.floating
+        &, &:not([disabled]), &[disabled]
+            @include theme
+                background: $_accent
+                color: $_accent-contrast
+                margin-right: 1.2rem
+                transition: opacity 0.5s $mdtiming
+        &[disabled]
+            @include theme
+                opacity: 0.4
+
+.primary
+    &.raised, &.floating
+        &, &:not([disabled]), &[disabled]
+            @include theme
+                background: $_primary
+                color: $_primary-contrast
+                margin-right: 1.2rem
+                transition: opacity 0.5s $mdtiming
+        &[disabled]
+            @include theme
+                opacity: 0.4

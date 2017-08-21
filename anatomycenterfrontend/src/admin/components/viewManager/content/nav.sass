@@ -1,0 +1,54 @@
+.nav
+    display: flex
+    flex-flow: column nowrap
+    .add
+        display: flex
+        align-items: center
+        justify-content: center
+        cursor: pointer
+        & :global .mdi
+            font-size: 4rem
+            padding: 1.5rem 0 0.5rem
+            +theme
+                color: $_text
+
+.item
+    border-bottom: solid 1px rgba(black, 0.1)
+    list-style: none
+    &.active
+        background: rgba(black, 0.1)
+    .right
+        float: right
+    .view
+        padding: 0 1rem
+    .edit
+        display: flex
+        flex-flow: row nowrap
+        .order
+            width: 3rem
+            flex: 0 0 3rem
+            padding: 0.5rem
+            display: flex
+            flex-flow: column nowrap
+            justify-content: center
+            border-right: solid 1px rgba(black, 0.1)
+            .button
+                width: 2rem
+                height: 2rem
+                transition: all 0.3s $animation-curve-default
+                cursor: pointer
+                margin: 0.5rem 0
+                +rTheme
+                    background: mix($_background, #888, 25%)
+                    color: $_text
+                    &:hover
+                        background: $_background
+                border-radius: 100%
+                display: flex
+                align-items: center
+                justify-content: center
+                & :global .mdi
+                    font-size: 1.5rem
+        .inputs
+            flex: 1
+            padding: 1rem

@@ -1,0 +1,63 @@
+/* Base Application Styles */
+
+// @import url(https://fonts.googleapis.com/css?family=Roboto:100,400&subset=latin-ext)
+
+body, html
+    font-size: 10pt
+    font-family: "Roboto", "Helvetica Neue", "Arial", "Helvetica", sans-serif
+    font-weight: 400
+    font-weight: 300
+    font-weight: 200
+    font-weight: 100
+    background: black
+
+*
+    box-sizing: border-box
+
+
+:global
+    .app-loading
+        height: calc(100% + #{$nav-height})
+        z-index: 50
+        box-shadow: 0 2px 4px rgba(black, 0.2)
+        background: white
+    body.active
+        .app-loading
+            transform: translateY(calc(-100% + #{$nav-height}))
+            transition: all $login-anim-time $mdtiming
+            pointer-events: none
+
+
+
+$gbtnv: ":global(.btn)"
+#{$gbtnv}
+    margin: 10px 0
+    padding: 5px
+    border: none
+    border-radius: 2px
+    font-size: 12pt
+    padding: 5px 10px
+    opacity: 0.7
+    transform: none
+    transition: all 0.5s $mdtiming
+    outline: none
+    &:hover
+        opacity: 1
+    &:active
+        transform-origin: top center
+        transform: rotateX(-20deg) translateY(-2px)
+
+    @include theme
+        background: $_background
+        color: $_text
+        box-shadow: 0 1px 2px rgba(black, 0.2)
+    $gbtnv: "&:global(.btn-primary)"
+    #{$gbtnv}
+        @include rTheme
+            background: $_primary
+    $gbtnv: "&:global(.btn-danger)"
+    #{$gbtnv}
+        @include rTheme
+            background: $_danger
+    &:not(:first-child), &:not(:first-of-type)
+        margin-right: 10px

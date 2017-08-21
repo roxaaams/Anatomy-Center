@@ -1,0 +1,51 @@
+$nav-size: 20vw
+$max-nav-size: 200px
+
+.container
+    display: flex
+    align-items: row nowrap
+    width: 100%
+    height: 100%
+    overflow: hidden
+    & > *
+        box-shadow: 0 1px 2px rgba(black, 0.2)
+    .nav
+        width: $nav-size
+        max-width: $max-nav-size
+        flex-flow: $nav-size
+        overflow-y: auto
+        +theme
+            background: mix($_background, #888, 90%)
+    .content
+        flex: 1
+        background: white
+        padding: 2rem
+        overflow-y: auto
+        .editor
+            display: flex
+            align-items: row nowrap
+            & > *
+                flex: 1
+                padding: 1rem
+                &:last-child
+                    border-left: solid 1px rgba(black, 0.1)
+
+    .backButton
+        flex: 0
+
+.preview
+    max-width: 10vw
+    max-height: 10vh
+
+.break
+    margin: 5rem 0
+    border-color: rgba(black, 0.1)
+
+.inputWrapper
+    display: flex
+    align-items: center
+    justify-content: center
+    .input
+        flex: 1
+    .button
+        flex: 0

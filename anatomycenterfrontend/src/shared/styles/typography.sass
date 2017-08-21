@@ -1,0 +1,110 @@
+h1, h2, h3, h4, h5, h6
+    padding: 0
+    margin: 10px 0
+    font-weight: 100
+    clear: both
+
+h1, h3, h5
+    border-bottom: solid 3px $text
+h1, h3, h5
+    font-style: italic
+
+
+h1, h2
+    font-size: 2.4rem
+    padding: 20px 20px 20px 30px
+    background: rgba(black, 0.1)
+h3, h4
+    font-size: 1.8rem
+    padding: 10px 10px 10px 15px
+    background: rgba(black, 0.05)
+    border-width: 2px
+h5, h6
+    font-size: 1.6rem
+    padding: 5px 5px 5px 10px
+    border-width: 1px
+
+p
+    font-size: 1.2rem
+    text-indent: 2.4rem
+    padding: 1rem 0
+    vertical-align: middle
+
+blockquote, code
+    +theme
+        border-left: solid 2px $_primary
+    margin: 0
+    padding: 1.95rem 2rem 0.75rem
+    white-space: pre-wrap
+    position: relative
+    font-family: "Meslo", "Menlo", "Inconsolata", "Andale Mono", "Lucida Console", monospace
+    &:after
+        position: absolute
+        left: 5px
+        top: 5px
+        opacity: 0.2
+        z-index: -1
+        font-size: 1.2rem
+
+blockquote
+    &:after
+        content: '""'
+        font-size: 2.4rem
+
+code
+    display: block
+    +theme
+        border-color: $_accent
+    &:after
+        content: " // CODE "
+
+figure
+    max-width: 400px
+    max-height: 300px
+    img
+        max-width: 100%
+        max-height: 100%
+        box-shadow: $zdepth-shadow-1
+
+:global(.left), :global(.right), :global(.center)
+    margin: 0.5rem
+    padding: 0
+    text-indent: 0
+    display: inline-block
+
+:global(.center), :global(.clear)
+    width: 100%
+    display: block
+    clear: both
+    float: none
+
+:global(.center)
+    text-align: center
+
+:global(.left)
+    float: left
+    &:global(.clear)
+        text-align: left
+        float: none
+
+:global(.right)
+    float: right
+    &:global(.clear)
+        text-align: right
+        float: none
+
+a, a:link
+    text-decoration: none
+    transition: color 0.25s $animation-curve-default
+    vertical-align: middle
+    font-size: 1.25em
+    &:after
+        content: " (" attr(href) ")"
+        font-size: 0.9rem
+    +theme
+        color: desaturate($_primary, 20)
+        &:hover
+            color: $_primary
+    &:visited
+        +theme
+            color: $_accent

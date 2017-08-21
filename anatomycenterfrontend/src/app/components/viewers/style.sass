@@ -1,0 +1,11 @@
+
+body > canvas
+    position: absolute
+    left: 0
+    top: 0
+    z-index: 2 !important
+    &:global(#main-scene)
+        z-index: 3 !important
+
+body > video
+    z-index: 1 !important

@@ -1,0 +1,37 @@
+.container
+    display: flex
+    position: relative
+    align-items: center
+    justify-content: center
+    height: 100%
+    width: 100%
+    .flagContainer
+        position: relative
+        height: 40px
+        width: 40px
+        display: flex
+        align-items: center
+        justify-content: center
+        cursor: pointer
+        img
+            width: 20px
+            height: 20px
+    .card
+        position: absolute
+        right: 10px
+        top: 10px
+        box-shadow: $zdepth-shadow-1
+        display: flex
+        align-items: center
+        justify-content: center
+        background: white
+        padding: 10px
+        opacity: 0
+        z-index: -1
+        transition: all 1s $animation-curve-default
+        &.active
+            opacity: 1
+            z-index: 150
+        li
+            list-style: none
+            display: inline-flex

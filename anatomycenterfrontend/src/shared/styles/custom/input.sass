@@ -1,0 +1,26 @@
+$globalpanel: ":global(.panel)"
+
+.hint, .inputElement
+    @include theme
+        color: $_text
+        border-bottom: solid 1px transparentize($_text, 0.8)
+    #{$globalpanel} &
+        @include theme
+            color: invert($_text)
+            border-bottom: solid 1px transparentize(invert($_text), 0.8)
+.error
+    @include theme
+        color: $_danger
+
+.bar
+    &:before, &:after
+        @include theme
+            background-color: $_primary
+
+.inputElement:focus ~ .label
+    @include theme
+        color: $_primary
+
+.label
+    +theme
+        color: transparentize($_text, 0.3)

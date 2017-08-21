@@ -1,0 +1,27 @@
+@mixin arrow($size, $color)
+    content: ""
+    font-size: 0
+    width: 0
+    height: 0
+    padding: 0
+    margin: 0
+    border: solid $size transparent
+    border-top: none
+    border-bottom-color: $color
+    @content
+
+@mixin arrowRight($size, $color)
+    @include arrow($size, $color)
+        transform rotate(90deg)
+
+@mixin arrowLeft($size, $color)
+    @include arrow($size, $color)
+        transform rotate(-90deg)
+
+@mixin bg-radial($start-colour, $start-position, $end-colour, $end-position)
+    background: -moz-radial-gradient(center, ellipse cover, $start-colour $start-position, $end-colour $end-position)
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, Colour-stop($start-position,$start-colour), Colour-stop($end-position,$end-colour))
+    background: -webkit-radial-gradient(center, ellipse cover, $start-colour $start-position,$end-colour $end-position)
+    background: -o-radial-gradient(center, ellipse cover, $start-colour $start-position,$end-colour $end-position)
+    background: -ms-radial-gradient(center, ellipse cover, $start-colour $start-position,$end-colour $end-position)
+    background: radial-gradient(ellipse at center, $start-colour $start-position,$end-colour $end-position)

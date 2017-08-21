@@ -1,0 +1,47 @@
+
+.nav
+    position: fixed
+    height: $chrome-navbar-height
+    top: 0
+    left: 0
+    right: 0
+    display: flex
+    align-items: center
+    justify-content: flex-end
+    list-style: none
+    padding-right: $chrome-navbar-height / 8
+    -webkit-app-region: drag
+    background: rgba(0, 0, 0, 0.2)
+    z-index: 9
+    &:hover .button
+        opacity: 0.6
+    .button
+        list-style: none
+        border-radius: 100%
+        height: $chrome-navbar-height / 2
+        width: $chrome-navbar-height / 2
+        margin: 0 $chrome-navbar-height / 13
+        -webkit-app-region: no-drag
+        &.close
+            +bg-radial($palette-red-500, 0%, $palette-red-700, 100%)
+        &.minimize
+            +bg-radial($palette-yellow-500, 0%, $palette-yellow-700, 100%)
+        &.maximize
+            +bg-radial($palette-green-500, 0%, $palette-green-700, 100%)
+        display: flex
+        align-items: center
+        justify-content: center
+        transition: opacity 0.3s $animation-curve-default
+        opacity: 0
+        &:hover
+            opacity: 1
+        svg
+            margin: 0
+            padding: 0
+            height: $chrome-navbar-height / 2.6
+            width: $chrome-navbar-height / 2.6
+
+body:global(.active) :local .nav
+    background: transparent
+    .button
+        box-shadow: 0 0.5px 0.5px rgba(white, 0.2), 0 -0.5px 0.5px rgba(black, 0.2)

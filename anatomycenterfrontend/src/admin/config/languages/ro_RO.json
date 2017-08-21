@@ -1,0 +1,15 @@
+{
+    "name": "Română",
+    "description": "Limba Română",
+    "flag": "ro",
+    "sets": {
+        "nav": {
+            "Main Website": "Site-ul Principal",
+            "Admin Panel": "Panou de Administrare"
+        },
+        "login": {
+            "eMail Address": "Adresa eMail",
+            "Password": "Parola"
+        }
+    }
+}

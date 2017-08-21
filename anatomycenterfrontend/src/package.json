@@ -1,0 +1,10 @@
+{
+  "name": "anatomycenter",
+  "version": "0.3.1",
+  "license": "MIT",
+  "main": "assets/app.electron.js",
+  "author": "Roxana Mafteiu-Scai",
+  "devDependencies": {
+    "electron": "^1.6.2"
+  }
+}

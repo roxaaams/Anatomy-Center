@@ -1,0 +1,95 @@
+// themes go first
+// order of the following includes hints at default values (first = default)
+//
+@import "~breakpoint-sass"
+
+@import "~react-toolbox/lib/colors"
+@import "~react-toolbox/lib/globals"
+
+@import "./_light"
+@import "./_dark"
+
+// other variables
+$mdtiming: cubic-bezier(.62,.28,.23,.99)
+$nav-height: 65px
+$theme-switch-time: 0.75s
+$login-anim-time: 2s
+
+$light-name: ":global(.light)"
+$dark-name: ":global(.dark)"
+
+$_text: $text
+$_primary: $primary
+$_primary-contrast: $primary-contrast
+$_danger: $danger
+$_accent: $accent
+$_accent-contrast: $accent-contrast
+$_background: $background
+
+$chrome-navbar-height: 25px !default
+
+@mixin pickTheme($theme)
+    @if $theme == dark
+        $_text: $dark-text !global
+        $_primary: $dark-primary !global
+        $_accent: $dark-accent !global
+        $_danger: $dark-danger !global
+        $_background: $dark-background !global
+        $_accent-contrast: $dark-accent-contrast
+        $_primary-contrast: $dark-primary-contrast
+        @content
+    @else
+        $_text: $light-text !global
+        $_primary: $light-primary !global
+        $_accent: $light-accent !global
+        $_danger: $light-danger !global
+        $_background: $light-background !global
+        @content
+
+@mixin wrapLightTheme
+    #{$light-name} &
+        @include pickTheme(light)
+            @content
+
+@mixin wrapDarkTheme
+    #{$dark-name} &
+        @include pickTheme(dark)
+            @content
+
+@mixin wrapLightRTheme
+    #{$light-name} &
+        @include pickTheme(dark)
+            @content
+
+@mixin wrapDarkRTheme
+    #{$dark-name} &
+        @include pickTheme(light)
+            @content
+
+@mixin theme
+    @include wrapLightTheme
+        @content
+    @include wrapDarkTheme
+        @content
+
+@mixin rTheme
+    @include wrapLightRTheme
+        @content
+    @include wrapDarkRTheme
+        @content
+
+// next items
+
+@import "./_components"
+
+// TODO: React Toolbox Styles (integrated with )
+
+$color-primary: $primary !default
+$color-primary-dark: darken($primary, 20%) !default
+$color-accent: $accent !default
+$color-accent-dark: darken($accent, 20%) !default
+$color-primary-contrast: $primary-contrast !default
+$color-accent-contrast: $accent-contrast !default
+$color-background: $background !default
+$color-text: $text !default
+$color-text-secondary: mix($text, #888) !default

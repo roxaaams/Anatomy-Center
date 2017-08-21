@@ -1,0 +1,92 @@
+{
+    "name": "Română",
+    "description": "Limba Română",
+    "flag": "ro",
+    "sets": {
+        "nav": {
+            "Change Theme": "Schimba culoarea",
+            "Leave Feedback": "Lăsați Feedback",
+            "Logout": "Deconectare"
+        },
+        "posts": {
+            "Back": "Înapoi",
+            "Content": "Conținut",
+            "Tests": "Teste",
+            "Loading": "Se încarcă"
+        },
+        "general": {
+            "Read More": "Citește mai mult",
+            "Next": "Următorul",
+            "Previous": "Anteriorul",
+            "Submit": "Trimite",
+            "View": "Vizualizează",
+            "Hide": "Ascunde",
+            "Show": "Arată",
+            "Answered": "Răspuns",
+            "Not answered": "Nu e răspuns",
+            "correctly": "corect",
+            "Reset": "Resetează",
+            "Check": "Verifică"
+        },
+        "gallery": {
+            "Rendering": "Se încarcă",
+            "3D Model": "Model 3D",
+            "Augmented Reality": "Realitate Augmentată",
+            "Virtual Reality": "Realitate Virtuală"
+        },
+        "article": {
+            "Gallery": "Galerie",
+            "Sidebar": "Bară meniu",
+            "Puzzles": "Puzzle-uri",
+            "Content": "Conținut"
+        },
+        "content": {
+            "Discussion": "Discuție",
+            "Leaderboards": "Clasamente",
+            "Home": "Acasă"
+        },
+        "puzzles": {
+            "question": "Întrebare",
+            "questions": "întrebări",
+            "puzzles": "puzzle-uri",
+            "puzzle": "puzzle",
+            "matchedobjects": "puzzle-uri potrivire imagine",
+            "missingwords": "puzzle-uri potrivire text",
+            "Questions": "Întrebări",
+            "Image Puzzles": "Puzzle imagine",
+            "Match Object Puzzles": "Potrivire Imagine",
+            "Missing Words Puzzles": "Potrivite Text"
+        },
+        "comments": {
+            "Posted by": "Postat de",
+            "There are no comments yet": "Încă nu există comentarii",
+            "New Comment": "Comentariu nou"
+        },
+        "entertainment": {
+            "There are no": "Nu există",
+            "for this article": "pentru acest articol",
+            "No renderer available for the": "Nu există renderer pentru",
+            "puzzle type": " "
+        },
+        "leaderboards": {
+            "There are no users": "Nu există utilizatori"
+        },
+        "users": {
+            "User": "Utilizator",
+            "Poster": "Autor",
+            "Rank": "Rang"
+        },
+        "search": {
+            "Search Query": "Cautare",
+            "Results": "Rezultate",
+            "Searching for": "Cautare pentru",
+            "There was nothing found matching": "Nu s-a gasit nimic asemănător cu"
+        },
+        "questions": {
+            "Completed at": "Completat la",
+            "Belongs to": "Aparține lui",
+            "Value": "Valoarea",
+            "points": "puncte"
+        }
+    }
+}

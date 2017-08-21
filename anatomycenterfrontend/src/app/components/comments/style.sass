@@ -1,0 +1,45 @@
+@import "../../styles/bar.sass"
+
+.comments
+    position: relative
+    display: flex
+    flex-flow: column nowrap
+    height: calc(100% + 3.4rem)
+    width: calc(100% + 2.4rem)
+    margin: -1.7rem -1.2rem
+    .aside
+        flex: 0 0 100px
+        display: flex
+        flex-flow: row nowrap
+        box-shadow: 0 -2px 4px rgba(black, 0.2)
+        background: white
+        .preview, .inputGroup
+            flex: 0 0 50%
+        .preview
+            padding: 1.7rem 1.2rem
+            // @import "~sassline/assets/sass/style.scss"
+
+    .list
+        flex: 1
+        align-items: flex-start
+        flex-flow: column nowrap
+        display: flex
+        padding: 1.7rem 1.2rem
+        overflow-x: none
+        overflow-y: auto
+        .comment
+            background: white
+            transition: all 0.3s $animation-curve-default
+            width: auto
+            font-size: 1.2rem !important
+            margin: 0.5rem 0
+            flex: 1 1 100px
+            min-height: 100px
+            h5
+                font-size: 2rem !important
+            &.own
+                align-self: flex-end
+                background: $primary
+                color: white
+                p
+                    color: #ccc

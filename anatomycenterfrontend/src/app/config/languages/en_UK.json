@@ -1,0 +1,33 @@
+{
+    "name": "United Kingdom",
+    "description": "Traditional, non-simplified version of english",
+    "flag": "gb",
+    "sets": {
+        "main": {
+            "Hey there": "Oi, there",
+            "Please edit": "We politely request that you edit",
+            "to get started": "do begin the process",
+            "Every human being is the author of his own health or disease.- Buddha": "Every human being is the author of his own health or disease.- Buddha",
+            "Eye diseases": "Eye diseases",
+            "Respiratory diseases": "Respiratory diseases",
+            "Endocrine diseases": "Endocrine diseases",
+            "Gynecological disorders": "Gynecological disorders",
+            "Dermatologic disorders": "Dermatologic disorders",
+            "Neurological diseases": "Neurological diseases",
+            "Blood diseases": "Blood diseases",
+            "Cardiovascular diseases": "Cardiovascular diseases",
+            "Nutrition & metabolism disorders": "Nutrition & metabolism disorders",
+            "Digestive diseases": "Digestive diseases",
+            "Orthopedic disorders": "Orthopedic disorders",
+            "Mental disorders": "Mental disorders",
+            "Infectious diseases": "Infectious diseases",
+            "Parasitic diseases": "Parasitic diseases",
+            "Sexually Transmitted Diseases": "Sexually Transmitted Diseases",
+            "Cancer": "Cancer"
+        },
+
+        "admin": {
+
+        }
+    }
+}

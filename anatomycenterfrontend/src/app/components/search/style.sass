@@ -1,0 +1,25 @@
+@import "../../styles/content.sass"
+@import "../../styles/bar.sass"
+@import "../comments/tabfix.sass"
+
+.wrapper
+    flex-flow: column nowrap
+
+.title
+    +theme
+        color: $_primary
+    font-size: 4rem
+    height: 5rem
+    line-height: 5rem
+
+.list
+    flow: 1
+    overflow-x: hidden
+    overflow-y: auto
+    display: flex
+    align-items: flex-start
+    justify-content: space-between
+    flex-flow: row wrap
+    & > div
+        flex: 1 1 200px
+        margin: 0.5rem

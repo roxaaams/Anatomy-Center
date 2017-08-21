@@ -1,0 +1,49 @@
+.wrapper
+    max-width: 750px
+
+.question
+    $textcolor: lighten($text, 40)
+    font-size: 2.5rem
+    border-bottom: solid 1px $textcolor
+    padding: 0 0 8px
+    margin: 0 0 35px
+    font-weight: 100
+    color: $textcolor
+
+.title > div
+    width: 100%
+    height: 100%
+    display: flex
+    align-items: center
+    justify-content: space-between
+    h5
+        margin: 0
+
+.right
+    display: flex
+    justify-content: flex-end
+
+.option
+    margin: 1rem 0
+    height: 6rem
+    display: flex
+    align-items: center
+    padding: 0 2rem
+
+    transition: background 1s $animation-curve-default
+    background: white
+
+    border-radius: 3px
+
+    &.correct, &.incorrect
+        font-weight: bold
+
+    &.correct
+        background: $palette-green-200
+        &.answered
+            background: $palette-green-700
+
+    &.incorrect
+        background: $palette-red-200
+        &.answered
+            background: $palette-red-700

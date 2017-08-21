@@ -1,0 +1,10 @@
+version: "2"
+services:
+    web:
+        build: .
+        ports:
+            - 8000:8000
+        environment:
+            WEBPACK_SRC: admin
+        volumes:
+            - ./:/app

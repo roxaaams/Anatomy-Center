@@ -1,0 +1,72 @@
+@import "../../styles/variables.sass"
+@import "../../styles/content.sass"
+@import "../../styles/bar.sass"
+@import "../comments/tabfix.sass"
+
+
+.title
+    +theme
+        color: $_primary
+    font-size: 4rem
+    height: 5rem
+    line-height: 5rem
+.wrapper
+    width: 100%
+    height: 100%
+    display: flex
+    flex-flow: column nowrap
+.header
+    display: flex
+    height: $me-img-size
+    flex: 0 0 $me-img-size
+    width: 100%
+    align-items: flex-start
+    justify-content: flex-start
+    > img
+        width: $me-img-size
+        height: $me-img-size
+        flex: 0 0 $me-img-size
+        border-radius: $me-img-size
+        border: solid 4px white
+        box-shadow: 0 2px 4px rgba(black, 0.2), 0 0 5px rgba(black, 0.4) inset
+        margin: 0 2rem 0 0
+        &:last-child
+            margin: 0 0 0 2rem
+        &.badge
+            padding: 1rem
+            +theme
+                background: $_primary
+    .titles
+        flex: 1
+        display: flex
+        flex-flow: column nowrap
+        h1
+            flex: 0 0 $me-img-size / 2
+            font-size: $me-img-size / 5
+            line-height: $me-img-size / 2
+            border-bottom: solid 2px black
+            padding: 0
+            margin: 0
+            span
+                font-size: $me-img-size / 8
+                +theme
+                    color: $_primary
+        h2
+            flex: 1
+            font-size: $me-img-size / 8
+            line-height: $me-img-size / 3
+            padding: 0
+            margin: 0
+            color: #666
+.list
+    flex: 1
+    .list
+        display: flex
+        flex-flow: row wrap
+        align-items: flex-start
+        justify-content: flex-start
+        overflow: auto
+        .item
+            min-width: 200px
+            min-height: 100px
+            margin: 0.5rem

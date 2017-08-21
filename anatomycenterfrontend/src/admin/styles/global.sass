@@ -1,0 +1,79 @@
+/* Base Application Styles */
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:100,400&subset=latin-ext)
+
+body, html
+    font-size: 67.5%
+    font-family: "Roboto", "Helvetica Neue", "Arial", "Helvetica", sans-serif
+    font-weight: 400
+    font-weight: 300
+    font-weight: 200
+    font-weight: 100
+
+*
+    box-sizing: border-box
+
+
+$login-anim-time: 2s
+:global
+    .app
+        width: 100%
+        height: 100%
+        position: absolute
+        top: 0
+        left: 0
+        background: $background
+        color: $text
+        opacity: 0
+        transform: scale(0.7)
+        z-index: 9
+        overflow: hidden
+        perspective: 600px
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.6)
+    .app-loading
+        transform: none
+        opacity: 1
+    body.active
+        .app
+            opacity: 1
+            transform: none
+            transition: all $login-anim-time $mdtiming
+        .app-loading
+            opacity: 0.5
+            transform: translateX(-100%) rotateY(10deg)
+            transition: all $login-anim-time $mdtiming
+
+
+
+$gbtnv: ":global(.btn)"
+#{$gbtnv}
+    margin: 10px 0
+    padding: 5px
+    border: none
+    border-radius: 2px
+    font-size: 12pt
+    padding: 5px 10px
+    opacity: 0.7
+    transform: none
+    transition: all 0.5s $mdtiming
+    outline: none
+    &:hover
+        opacity: 1
+    &:active
+        transform-origin: top center
+        transform: rotateX(-20deg) translateY(-2px)
+
+    @include theme
+        background: $_background
+        color: $_text
+        box-shadow: 0 1px 2px rgba(black, 0.2)
+    $gbtnv: "&:global(.btn-primary)"
+    #{$gbtnv}
+        @include rTheme
+            background: $_primary
+    $gbtnv: "&:global(.btn-danger)"
+    #{$gbtnv}
+        @include rTheme
+            background: $_danger
+    &:not(:first-child), &:not(:first-of-type)
+        margin-right: 10px
